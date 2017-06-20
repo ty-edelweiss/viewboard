@@ -17,7 +17,7 @@ export default class AppSetting extends React.Component {
         return (
             <div className="appSetting linearRight boxCenter">
               <button type="button" className="setting-toggle" onClick={this.handleClick}>
-                <img src="img/setting-icon.png" width="12px" height="12px" />
+                <img src="img/setting-icon.png" width="10.5px" height="10.5px" />
               </button>
             </div>
         );
