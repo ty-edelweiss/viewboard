@@ -7,8 +7,8 @@ const server = http.Server(app);
 
 const PORT = process.env.PORT || 3000;
 
-app.use('/lib', express.static(process.env.PWD + '/lib'));
-app.use('/dest', express.static(process.env.PWD + '/dest'));
+app.use('/lib', express.static(process.env.PWD + '/app/lib'));
+app.use('/dest', express.static(process.env.PWD + '/app/dest'));
 
 console.log(process.env.PWD);
 app.get('/', function(req, res) {
