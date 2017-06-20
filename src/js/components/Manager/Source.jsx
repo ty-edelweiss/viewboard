@@ -41,7 +41,7 @@ export default class Source extends React.Component {
               </span>
               <span className="source-namebox widgetLeft">{source.name}</span>
               <span className="source-destroybox widgetRight" onClick={this.handleDelete}>
-                <img src="dest/img/destroy-icon.png" />
+                <img src="img/destroy-icon.png" />
               </span>
               <span className="source-colorbox widgetRight">
                 <BindPicker defaultValue={source.color} handleChange={this.handleColor} />
