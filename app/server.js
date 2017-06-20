@@ -4,17 +4,16 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-process.env.PWD = process.cwd()
 
 const server = http.Server(app);
 
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(process.env.PWD, '../app')));
+app.use('/dest', express.static(path.join(__dirname, './dest')));
 
 console.log(process.env.PWD);
 app.get('/', function(req, res) {
-    const stream = fs.createReadStream(process.env.PWD + '/app/index.html', { encoding: 'utf8' });
+    const stream = fs.createReadStream(path.join(__dirname, './index.html'), { encoding: 'utf8' });
     stream.pipe(res);
 });
 
