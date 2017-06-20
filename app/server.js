@@ -7,11 +7,11 @@ const server = http.Server(app);
 
 const PORT = process.env.PORT || 3000;
 
-app.use('/lib', express.static(__dirname + '/lib'));
-app.use('/dest', express.static(__dirname + '/dest'));
+app.use('/lib', express.static(process.env.PWD + '/lib'));
+app.use('/dest', express.static(process.env.PWD + '/dest'));
 
 app.get('/', function(req, res) {
-    const stream = fs.createReadStream(__dirname + '/index.html', { encoding: 'utf8' });
+    const stream = fs.createReadStream(process.env.PWD + '/index.html', { encoding: 'utf8' });
     stream.pipe(res);
 });
 
