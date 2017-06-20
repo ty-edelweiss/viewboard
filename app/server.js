@@ -9,7 +9,7 @@ const server = http.Server(app);
 
 const PORT = process.env.PORT || 3000;
 
-app.use('/dest', express.static(path.join(__dirname, './dest')));
+app.use(express.static(path.join(__dirname, './dest')));
 
 console.log(process.env.PWD);
 app.get('/', function(req, res) {
