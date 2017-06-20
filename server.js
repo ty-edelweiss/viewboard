@@ -16,5 +16,5 @@ app.get('/', function(req, res) {
 });
 
 server.listen(PORT, function() {
-    console.log('server running ...  at heroku app:' + PORT);
+    console.log('server running ...  at heroku app:' + PORT + __dirname);
 });
