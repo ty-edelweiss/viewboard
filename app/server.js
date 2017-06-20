@@ -8,7 +8,7 @@ const server = http.Server(app);
 
 const PORT = process.env.PORT || 3000;
 
-pp.use(favicon(__dirname + '/public/icon/favicon.ico'));
+app.use(favicon(__dirname + '/public/icon/favicon.ico'));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {

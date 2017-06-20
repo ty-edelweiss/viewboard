@@ -1,5 +1,6 @@
 const http = require('http');
 const express = require('express');
+const favicon = require('serve-favicon');
 const fs = require('fs');
 const app = express();
 
@@ -8,12 +9,11 @@ const server = http.Server(app);
 const ADDRESS = '127.0.0.1';
 const PORT = process.env.PORT || 3000;
 
-app.use('/dest', express.static(process.env.PWD + '/app/dest'));
-app.use('/lib', express.static(process.env.PWD + '/app/lib'));
-console.log(process.env.PWD);
+app.use(favicon(__dirname + '/public/icon/favicon.ico'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-    const stream = fs.createReadStream(process.env.PWD + '/app/index.html', { encoding: 'utf8' });
+    const stream = fs.createReadStream(__dirname + '/index.html', { encoding: 'utf8' });
     stream.pipe(res);
 });
 
