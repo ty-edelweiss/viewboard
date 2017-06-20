@@ -8,7 +8,7 @@ const server = http.Server(app);
 
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + '/dest'));
+app.use(express.static(__dirname + '/public'));
 
 console.log(process.env.PWD);
 app.get('/', function(req, res) {
