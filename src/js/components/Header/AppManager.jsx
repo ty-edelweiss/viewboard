@@ -14,7 +14,7 @@ export default class AppManager extends React.Component {
 
     render() {
         const { visibility } = this.props;
-        const imgSrc = visibility ? 'public/img/up-icon.png' : 'public/img/down-icon.png';
+        const imgSrc = visibility ? 'img/up-icon.png' : 'img/down-icon.png';
         return (
             <div className="appManager linearRight boxCenter">
               <div className="manager-toggle linearContainer" onClick={this.handleClick}>

@@ -24608,7 +24608,7 @@ var AppLogo = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "logoImg linearLeft" },
-            _react2.default.createElement("img", { src: "public/img/app-icon.png", width: "40px", height: "40px" })
+            _react2.default.createElement("img", { src: "img/app-icon.png", width: "40px", height: "40px" })
           ),
           _react2.default.createElement(
             "div",
@@ -24678,7 +24678,7 @@ var AppManager = function (_React$Component) {
         value: function render() {
             var visibility = this.props.visibility;
 
-            var imgSrc = visibility ? 'public/img/up-icon.png' : 'public/img/down-icon.png';
+            var imgSrc = visibility ? 'img/up-icon.png' : 'img/down-icon.png';
             return _react2.default.createElement(
                 'div',
                 { className: 'appManager linearRight boxCenter' },
@@ -24764,7 +24764,7 @@ var AppSetting = function (_React$Component) {
                 _react2.default.createElement(
                     'button',
                     { type: 'button', className: 'setting-toggle', onClick: this.handleClick },
-                    _react2.default.createElement('img', { src: 'public/img/setting-icon.png', width: '12px', height: '12px' })
+                    _react2.default.createElement('img', { src: 'img/setting-icon.png', width: '12px', height: '12px' })
                 )
             );
         }
@@ -27270,7 +27270,7 @@ var PropViewAllControl = function PropViewAllControl(opt_options) {
     var button = document.createElement('button');
     button.classList.add('all-property');
     var img = document.createElement('img');
-    img.setAttribute('src', 'public/img/search-icon-out.png');
+    img.setAttribute('src', 'img/search-icon-out.png');
     img.setAttribute('width', '10.5px');
     img.setAttribute('height', '10.5px');
     button.addEventListener('click', handlePropViewAll, false);
@@ -27286,7 +27286,7 @@ var PropViewAllControl = function PropViewAllControl(opt_options) {
                     accessLayers[i].setStyle(activateCache.pop());
                 }
             }
-            allProp.firstElementChild.setAttribute('src', 'public/img/search-icon-out.png');
+            allProp.firstElementChild.setAttribute('src', 'img/search-icon-out.png');
         } else if (target !== 'none') {
             allProp.classList.add('active');
 
@@ -27309,10 +27309,10 @@ var PropViewAllControl = function PropViewAllControl(opt_options) {
             for (var _i = 1; _i < accessLayers.length; _i++) {
                 _loop(_i);
             }
-            allProp.firstElementChild.setAttribute('src', 'public/img/search-icon-in.png');
+            allProp.firstElementChild.setAttribute('src', 'img/search-icon-in.png');
         } else {
             allProp.classList.add('active');
-            allProp.firstElementChild.setAttribute('src', 'public/img/search-icon-in.png');
+            allProp.firstElementChild.setAttribute('src', 'img/search-icon-in.png');
         }
     };
     button.appendChild(img);
@@ -27330,7 +27330,7 @@ var RefreshControl = function RefreshControl(opt_options) {
     var options = opt_options || {};
     var button = document.createElement('button');
     var img = document.createElement('img');
-    img.setAttribute('src', 'public/img/refresh-icon.png');
+    img.setAttribute('src', 'img/refresh-icon.png');
     img.setAttribute('width', '11.0px');
     img.setAttribute('height', '11.0px');
     button.addEventListener('click', handleRefresh, false);

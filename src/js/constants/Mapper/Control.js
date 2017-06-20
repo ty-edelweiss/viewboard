@@ -43,7 +43,7 @@ const PropViewAllControl = function(opt_options) {
     const button = document.createElement('button');
     button.classList.add('all-property');
     const img = document.createElement('img');
-    img.setAttribute('src', 'public/img/search-icon-out.png');
+    img.setAttribute('src', 'img/search-icon-out.png');
     img.setAttribute('width', '10.5px');
     img.setAttribute('height', '10.5px');
     button.addEventListener('click', handlePropViewAll, false);
@@ -57,7 +57,7 @@ const PropViewAllControl = function(opt_options) {
             if (activateCache.length > 0) {
                 for (let i = accessLayers.length-1; i > 0; i--) { accessLayers[i].setStyle(activateCache.pop()); }
             }
-            allProp.firstElementChild.setAttribute('src', 'public/img/search-icon-out.png');
+            allProp.firstElementChild.setAttribute('src', 'img/search-icon-out.png');
         } else if (target !== 'none') {
             allProp.classList.add('active');
             for (let i = 1; i < accessLayers.length; i++) {
@@ -73,10 +73,10 @@ const PropViewAllControl = function(opt_options) {
                 activateCache.push(styleFunction);
                 accessLayers[i].setStyle(targetFunction);
             }
-            allProp.firstElementChild.setAttribute('src', 'public/img/search-icon-in.png');
+            allProp.firstElementChild.setAttribute('src', 'img/search-icon-in.png');
         } else {
             allProp.classList.add('active');
-            allProp.firstElementChild.setAttribute('src', 'public/img/search-icon-in.png');
+            allProp.firstElementChild.setAttribute('src', 'img/search-icon-in.png');
         }
     };
     button.appendChild(img);
@@ -94,7 +94,7 @@ const RefreshControl = function(opt_options) {
     const options = opt_options || {};
     const button = document.createElement('button');
     const img = document.createElement('img');
-    img.setAttribute('src', 'public/img/refresh-icon.png');
+    img.setAttribute('src', 'img/refresh-icon.png');
     img.setAttribute('width', '11.0px');
     img.setAttribute('height', '11.0px');
     button.addEventListener('click', handleRefresh, false);
