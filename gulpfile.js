@@ -18,34 +18,34 @@ gulp.task('js-compile', function() {
     }).transform(babelify, { presets: ['es2015', 'react'] });
     return bundler.bundle()
            .pipe(source('bundle.js'))
-           .pipe(gulp.dest('./app/lib/js/'))
+           .pipe(gulp.dest('./app/public/js/'))
            .pipe(buffer())
            .pipe(sourcemaps.init())
            .pipe(uglify())
            .pipe(sourcemaps.write('./maps/'))
            .pipe(rename({extname: '.min.js'}))
-           .pipe(gulp.dest('./app/dest/js/'));
+           .pipe(gulp.dest('./app/public/js/'));
 });
 
 gulp.task('less-compile', function() {
     return gulp.src('./src/less/style.less')
            .pipe(less())
-           .pipe(gulp.dest('./app/lib/css/'))
+           .pipe(gulp.dest('./app/public/css/'))
            .pipe(sourcemaps.init())
            .pipe(clean())
            .pipe(sourcemaps.write('./maps/'))
            .pipe(rename({extname: '.min.css'}))
-           .pipe(gulp.dest('./app/dest/css/'));
+           .pipe(gulp.dest('./app/public/css/'));
 });
 
 gulp.task('css-compile', function() {
     return gulp.src('./src/css/*.css')
-           .pipe(gulp.dest('./app/lib/css/'))
+           .pipe(gulp.dest('./app/public/css/'))
            .pipe(sourcemaps.init())
            .pipe(clean())
            .pipe(sourcemaps.write('./maps/'))
            .pipe(rename({extname: '.min.css'}))
-        .pipe(gulp.dest('./app/dest/css/'));
+        .pipe(gulp.dest('./app/public/css/'));
 });
 
 gulp.task('server', function() {
@@ -73,8 +73,8 @@ gulp.task('watch', function() {
     gulp.watch('./src/css/*.css', ['css-compile']);
     gulp.watch('./app/*.js', ['server']);
     gulp.watch('./app/*.html', ['server']);
-    gulp.watch('./app/lib/css/*.css', ['server']);
-    gulp.watch('./app/lib/js/*.js', ['server']);
+    gulp.watch('./app/public/css/*.css', ['server']);
+    gulp.watch('./app/public/js/*.js', ['server']);
 });
 
 gulp.task('default', ['server', 'watch']);
