@@ -1,4 +1,4 @@
-# viewp
+# viewboard
 Original geo-json file mapping to OpenStreetMap. And enable interactive visualization of each geometry-object's property.
 This tool contribute to the progress of research. 
 
@@ -6,5 +6,4 @@ This tool contribute to the progress of research.
 This tool depends on the following framework.
 - react
 - redux
-- electron
 - openlayers
