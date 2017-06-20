@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use('/lib', express.static(__dirname + '/lib'));
 app.use('/dest', express.static(__dirname + '/dest'));
+console.log(__dirname);
 
 app.get('/', function(req, res) {
     const stream = fs.createReadStream(__dirname + '/index.html', { encoding: 'utf8' });
