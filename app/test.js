@@ -5,7 +5,7 @@ const app = express();
 
 const server = http.Server(app);
 
-//const ADDRESS = '127.0.0.1';
+const ADDRESS = '127.0.0.1';
 const PORT = process.env.PORT || 3000;
 
 app.use('/lib', express.static(__dirname + '/lib'));
@@ -17,11 +17,6 @@ app.get('/', function(req, res) {
     stream.pipe(res);
 });
 
-/*
 server.listen(PORT, ADDRESS, function() {
     console.log('server running ...  at '+ ADDRESS + ':' + PORT);
-});
-*/
-server.listen(PORT, function() {
-    console.log('server running ...  at heroku:' + PORT);
 });
