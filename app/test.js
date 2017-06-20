@@ -8,9 +8,8 @@ const server = http.Server(app);
 const ADDRESS = '127.0.0.1';
 const PORT = process.env.PORT || 3000;
 
-app.use('/lib', express.static(__dirname + '/lib'));
 app.use('/dest', express.static(__dirname + '/dest'));
-console.log(__dirname);
+app.use('/lib', express.static(__dirname + '/lib'));
 
 app.get('/', function(req, res) {
     const stream = fs.createReadStream(__dirname + '/index.html', { encoding: 'utf8' });
