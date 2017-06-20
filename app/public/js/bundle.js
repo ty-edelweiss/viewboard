@@ -24764,7 +24764,7 @@ var AppSetting = function (_React$Component) {
                 _react2.default.createElement(
                     'button',
                     { type: 'button', className: 'setting-toggle', onClick: this.handleClick },
-                    _react2.default.createElement('img', { src: 'img/setting-icon.png', width: '12px', height: '12px' })
+                    _react2.default.createElement('img', { src: 'img/setting-icon.png', width: '10.5px', height: '10.5px' })
                 )
             );
         }
@@ -25268,7 +25268,7 @@ var Source = function (_React$Component) {
                 _react2.default.createElement(
                     'span',
                     { className: 'source-destroybox widgetRight', onClick: this.handleDelete },
-                    _react2.default.createElement('img', { src: 'dest/img/destroy-icon.png' })
+                    _react2.default.createElement('img', { src: 'img/destroy-icon.png' })
                 ),
                 _react2.default.createElement(
                     'span',
@@ -26186,7 +26186,7 @@ var Body = function (_React$Component) {
                     _react2.default.createElement(
                         'button',
                         { className: 'setting-close', onClick: this.handleClick },
-                        _react2.default.createElement('img', { src: './dest/img/destroy-icon.png', width: '12px', height: '12px' })
+                        _react2.default.createElement('img', { src: 'img/destroy-icon.png', width: '12px', height: '12px' })
                     ),
                     _react2.default.createElement(_List2.default, { config: config, actions: actions })
                 )
