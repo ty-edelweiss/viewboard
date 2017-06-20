@@ -2,15 +2,14 @@ const http = require('http');
 const express = require('express');
 const fs = require('fs');
 const app = express();
+process.env.PWD = process.cwd()
 
 const server = http.Server(app);
 
 const PORT = process.env.PORT || 3000;
 
-process.env.PWD = process.cwd()
 
-app.use('/lib', express.static(process.env.PWD + '/app/lib'));
-app.use('/dest', express.static(process.env.PWD + '/app/dest'));
+app.use(express.static(process.env.PWD + '/app'));
 
 console.log(process.env.PWD);
 app.get('/', function(req, res) {
