@@ -1,6 +1,8 @@
 const http = require('http');
 const express = require('express');
+//const favicon = require('serve-favicon');
 const fs = require('fs');
+const path = require('path');
 const app = express();
 process.env.PWD = process.cwd()
 
@@ -8,8 +10,7 @@ const server = http.Server(app);
 
 const PORT = process.env.PORT || 3000;
 
-
-app.use(express.static(process.env.PWD + '/app'));
+app.use(express.static(path.join(process.env.PWD, '../app')));
 
 console.log(process.env.PWD);
 app.get('/', function(req, res) {
